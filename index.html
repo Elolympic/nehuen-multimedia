@@ -152,18 +152,28 @@
             text-decoration: none;
             padding: 0 10px 20px;
         }
+
+        section {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
     </style>
 
     <title>Newsletter</title>
 </head>
 <body>
-    <table cellpadding="0" cellspacing="0" style="border: 2px solid #0077ff; background-color: white;">
+    <table cellpadding="0" cellspacing="0" style="border: 2px solid #0077ff; background-color: white; width: 100%;">
         <tr>
-            <td style="background-color: #0a3452; padding: 1px; text-align: left;">
-                 <a href="https://opensea.io/es" target="_blank" rel="noopener noreferrer">
-                <img src="IMG/token.png" alt="NFT icono" style="max-width: 250px; width: 35px; vertical-align: middle;">
-                </a>
-                <p style="display: inline; color: white; font-size: 0.8rem;"> Nehuén Gargiulo </p>
+            <td style="background-color: #0a3452; padding: 10px; text-align: left;">
+                    <a href="https://opensea.io/es" target="_blank" rel="noopener noreferrer">
+                        <img src="IMG/token.png" alt="NFT icono" style="max-width: 250px; width: 35px; vertical-align: middle;">
+                    </a>
+                    <p style="display: inline; color: white; font-size: 0.8rem; margin-left: 1px;">Nehuén Gargiulo</p>
+                    <button id="boton" style="background-color: #3498db; color: white; padding: 10px 10px; float: right; border: none; cursor: pointer; font-size: 0.8rem; border-radius: 5px;">
+                        <a href="#seccion-destino" style="color: white; text-decoration: none;">Ir hacia abajo</a>
+                    </button>
             </td>
         </tr>
         <tr>
@@ -177,7 +187,7 @@
         </tr>
         <tr>
             <td
-                style="background-image: url(https://i.ibb.co/Hgc865t/robots.jpg); padding: 90px 30px; background-size:100%;">
+                style="background-image: url(img/robots.jpg); padding: 90px 30px; background-size:100%;">
                 <div id="text" class="fade fade-out fade-in">
                 <h2 style="text-shadow: 4px 4px #4163be54; font-weight: 600;"><mark style="color: rgb(255, 255, 255);">Tipos de
                     <a href="https://www.xataka.com/basics/que-nft-como-funcionan" target="_blank"
@@ -194,35 +204,35 @@
                 <img src="IMG/nft4.jpeg" alt="imagen deslizante" class="slide-image">
                 </div>
                 <div id="text" class="fade fade-out fade-in">
-            <h5 style="margin: 20px; padding: 0 80px;"> Las NFT son activos digitales únicos que representan la propiedad de un objeto o contenido específico en la cadena de bloques (blockchain)</h5>
+            <h5 style="margin: 20px; padding: 0 80px;"> Las NFT son <b style="font-weight: 900;">activos digitales únicos</b> que representan la propiedad de un objeto o contenido específico en la cadena de bloques (blockchain)</h5>
             </div>
             </td>
         </tr>
         <tr>
             <td>
                 <table cellpadding="0" cellspacing="0" style="width: 100%;">
-                                 <tr>
-                                    <td style="display: inline-block;">
-                                        <a href="https://opensea.io/es/category/art" target="_blank"
-                                            rel="noopener noreferrer">
-                                        <img src="https://i.ibb.co/SwBD2NL/arte.jpg"
-                                            alt="pixel art nft"
-                                            style="max-width: 260px; width: 100%; margin: 30px 30px 0 30px; border-radius: 15px;">
-                                        </a>
-                                        <h4> Arte </h4>
-                                        <p> Digital </p>
-                                    </td>
-                                    <td style="display: inline-block;">
-                                        <a href="https://opensea.io/es/category/art" target="_blank"
-                                            rel="noopener noreferrer">
-                                        <img src="https://i.ibb.co/9cYg38N/coleccionables-cartas.jpg"
-                                            alt="cartas coleccionables nft"
-                                            style="max-width: 260px; width: 100%; margin: 30px 30px 0 30px; border-radius: 15px;">
-                                        </a>
-                                        <h4> Coleccionables </h4>
-                                        <p> Cartas </p>
-                                    </td>
-                                </tr>
+                    <tr>
+                        <td style="display: inline-block;">
+                            <a href="https://opensea.io/es/category/art" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="img/arte.jpeg"
+                                alt="pixel art nft"
+                                style="max-width: 260px; width: 100%; margin: 30px 30px 0 30px; border-radius: 15px;">
+                            </a>
+                            <h4> Arte </h4>
+                            <p>Digital</p>
+                        </td>
+                        <td style="display: inline-block;">
+                            <a href="https://opensea.io/es/category/art" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="img/coleccionables cartas.jpeg"
+                                alt="cartas coleccionables nft"
+                                style="max-width: 260px; width: 100%; margin: 30px 30px 0 30px; border-radius: 15px;">
+                            </a>
+                            <h4> Coleccionables </h4>
+                            <p> Cartas </p>
+                        </td>
+                    </tr>
                     <tr>
                         <td>
                             <table cellpadding="0" cellspacing="0" style="width: 100%;">
@@ -250,12 +260,43 @@
                                 </tr>
                                 <tr>
                                     <td style="background-color: #fff; border-radius: px;">
-                                        <h5 style="margin: 20px; padding: 25px 100px 0 ; "> Poseer un NFT puede ser una manera de involucrarse con la tecnología blockchain, que es fundamental para el futuro de los activos digitales y los contratos inteligentes</h5>
+                                        <h5 style="margin: 10px 0 30px 0; padding: 25px 100px 0 ; "> Poseer un NFT puede ser una manera de involucrarse con la tecnología blockchain, <b style="font-weight: 900;">que es fundamental para el futuro de los activos digitales y los contratos inteligentes</b></h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #1271b5; border-radius: px;">
+                                        <h2><mark style="color: rgb(255, 255, 255);"> ¿Y qué es la Blockchain? </mark></h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="display: inline-block;">
+                                        <a href="https://www.sap.com/latinamerica/products/artificial-intelligence/what-is-blockchain.html#:~:text=El%20blockchain%20es%20un%20registro,%22tecnolog%C3%ADa%20de%20ledger%20distribuido%22." target="_blank"
+                                        rel="noopener noreferrer">
+                                    <img src="IMG/blockchain.webp"
+                                        alt="foto de blockchain"
+                                        style="max-width: 260px; width: 100%; margin: 30px 20px 0 30px; border-radius: 15px; float: left; height: auto;">
+                                    </a>
+                                    <h5 style="margin: 10px 60px 0px 0px; text-align: left;">La blockchain, es una tecnología que permite <b style="font-weight: 900;"> compartir información de manera segura y descentralizada.</b> Se trata de una base de datos que agrupa la información en bloques, que se enlazan entre sí de forma criptográfica.</h5>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="display: inline-block;">
+                                        <a href="https://www.sap.com/latinamerica/products/artificial-intelligence/what-is-blockchain.html#:~:text=El%20blockchain%20es%20un%20registro,%22tecnolog%C3%ADa%20de%20ledger%20distribuido%22." target="_blank"
+                                        rel="noopener noreferrer">
+                                    <img src="IMG/block.jpg"
+                                        alt="cubos enlazados"
+                                        style="max-width: 260px; width: 100%; margin: 30px 20px 0px 20px; border-radius: 15px; float: right; height: auto;">
+                                    </a>
+                                    <h5 style="margin: 10px 200px 0px 0px; text-align: left;"><ul><b style="font-weight: 900;">La blockchain tiene diversas aplicaciones, entre las que se encuentran:</b></ul>
+                                        <ul><li>Registro de transacciones de criptomonedas</li>
+                                        <li>Registro y transferencia de la propiedad de diferentes activos digitales</li>
+                                    <li>Contratos inteligentes, que son contratos autoejecutables de tipo online</li></ul>
+                                    </h5>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <h3 style="padding: 10px 0 0 0 ;">Mantente en contacto</h3>
+                                        <h3 style="padding: 10px 0 0 0 ;">Mantente en contacto para más información</h3>
                                     </td>
                                 </tr>
                                 <tr>
@@ -290,12 +331,13 @@
                                             <img src="https://uade.signototal.com/newsletter/img/redes/tiktok.png"
                                                 alt="tiktok icono" width="35px">
 
-                                        </a>
+                                        </a>    
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
+                                        <section id="seccion-destino"></section>
                                         <p style="font-size: 16px; color: rgb(0, 29, 122); padding: 0 10px 0 0;">Si necesitas ayuda, escribe a<a style="padding: 5px;" href="mailto:negargiulo@uade.edu.ar;">negargiulo@uade.edu.ar</a></p>
                                         <p style="font-size: 20px; font-weight: 700; line-height: 50px">&copy; UADE</p>
                                     </td>
