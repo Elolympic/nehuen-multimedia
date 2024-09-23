@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2A1E5C;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Titulo inicial */
+
+mark {
+    background-color: #2A1E5C;
+    padding: 10px 200px;
+    color: rgb(255, 255, 255);
+}
+
+/* Barra de búsqueda */
+
+.search-bar {
+    display: inline-block;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 20px;
+    border: 2px solid #edf2f4;
+    border-radius: 4px;
+    outline: none;
+    color: #2b2d42;
+}
+
+.search-bar button {
+    background-color: #2A1E5C;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.search-bar button:hover {
+    background-color: #005eff;
+}
+
+/* Contenedor de la barra de búsqueda y el texto */
+.search-container {
+    display: flex;
+    justify-content: space-between; /* Pone los elementos en los extremos opuestos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 5% 7% 0;
+}
+
+.search-text {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 20px;
+    border-radius: 4px;
+    background: #2A1E5C;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-text :hover {
+    background-color: #005eff;
+}
+
+
+/* Menú desplegable oculto por defecto */
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #0AD3FF;
+    border-radius: 10px;
+    padding: 10px;
+    top: 35%; /* Ajusta la posición del menú */
+    left: 8%;
+    z-index: 1;
+}
+
+/* Estilo de las opciones del menú desplegable */
+.menu-desplegable li {
+    padding: 10px;
+    margin: 0;
+    background-color: #0AD3FF;
+    list-style: none;
+}
+
+.menu-desplegable li:hover {
+    background-color: #005eff;
+}
+
+.menu-desplegable li a {
+    color: #2A1E5C;
+    text-decoration: none;
+}
+
+.menu-desplegable li:hover a {
+    color: #ffffff;
+}
+
+/* Mostrar el menú cuando se pasa el cursor sobre el span */
+#indice:hover + .menu-desplegable {
+    display: block;
+}
+
+/* Mantener el menú visible cuando se pasa el mouse sobre el menú desplegable */
+.menu-desplegable:hover {
+    display: block;
+}
+
+/* Secciones */
+
+nav {
+    padding: 0 0 20px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    background: #0AD3FF;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para suavizar la escala y el cambio de color */
+}
+
+nav ul li a {
+    color: #2A1E5C;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color del texto */
+}
+
+nav ul li:hover {
+    transform: scale(1.1); /* Escala al pasar el mouse */
+    background-color: #005eff; /* Cambia el color de fondo al pasar el mouse */
+}
+
+nav ul li:hover a {
+    color: #ffffff; /* Cambia el color del texto al pasar el mouse */
+}
+
+.secciones {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.secciones h1 {
+    font-size: 80px;
+    padding: 8%;
+}
+
+/* Informacion */
+
+.slider {
+    background-color: #219ebc;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.slider h2 {
+    font-size: 36px;
+    color: #ffb703;
+}
+
+.slider p {
+    font-size: 18px;
+    color: #fb8500;
+}
+
+.slider-nav {
+    margin-top: 20px;
+}
+
+.slider-nav button {
+    background-color: #ffb703;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.slider-nav button:hover {
+    background-color: #fb8500;
+}
+
+/* Otra parte de informacion */
+
+.content {
+    background-color: #2b2d42;
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #8ecae6;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #023047;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #023047;
+}
+
+footer {
+    background-color: #2b2d42;
+    color: #8d99ae;
+    text-align: center;
+    padding: 20px;
+}
