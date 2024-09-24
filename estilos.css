@@ -84,7 +84,7 @@ mark {
     background-color: #0AD3FF;
     border-radius: 10px;
     padding: 10px;
-    top: 33%; /* Ajusta la posición del menú */
+    top: 34%; /* Ajusta la posición del menú */
     left: 8%;
     z-index: 1;
 }
