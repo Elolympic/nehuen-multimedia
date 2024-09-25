@@ -56,8 +56,8 @@ mark {
 /* Contenedor de la barra de búsqueda y el texto */
 .search-container {
     display: flex;
-    justify-content: space-between; /* Pone los elementos en los extremos opuestos */
-    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between;
+    align-items: center;
     padding: 5% 7% 0;
 }
 
@@ -76,7 +76,6 @@ mark {
     background-color: #005eff;
 }
 
-
 /* Menú desplegable oculto por defecto */
 .menu-desplegable {
     display: none;
@@ -89,7 +88,6 @@ mark {
     z-index: 1;
 }
 
-/* Estilo de las opciones del menú desplegable */
 .menu-desplegable li {
     padding: 10px;
     margin: 0;
@@ -110,12 +108,10 @@ mark {
     color: #ffffff;
 }
 
-/* Mostrar el menú cuando se pasa el cursor sobre el span */
 #indice:hover + .menu-desplegable {
     display: block;
 }
 
-/* Mantener el menú visible cuando se pasa el mouse sobre el menú desplegable */
 .menu-desplegable:hover {
     display: block;
 }
@@ -130,25 +126,25 @@ nav ul li {
     display: inline-block;
     margin: 15px;
     padding: 10px;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
     background: #0AD3FF;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición para suavizar la escala y el cambio de color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a {
     color: #2A1E5C;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease; /* Transición suave para el cambio de color del texto */
+    transition: color 0.3s ease;
 }
 
 nav ul li:hover {
-    transform: scale(1.1); /* Escala al pasar el mouse */
-    background-color: #005eff; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1);
+    background-color: #005eff;
 }
 
 nav ul li:hover a {
-    color: #ffffff; /* Cambia el color del texto al pasar el mouse */
+    color: #ffffff;
 }
 
 .secciones {
@@ -197,8 +193,6 @@ nav ul li:hover a {
     background-color: #fb8500;
 }
 
-/* Otra parte de informacion */
-
 .content {
     background-color: #2b2d42;
     padding: 40px;
@@ -234,4 +228,123 @@ footer {
     color: #8d99ae;
     text-align: center;
     padding: 20px;
+}
+
+/* Media Queries para hacer la página responsive */
+
+/* Ajustes para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    .secciones h1 {
+        font-size: 60px;
+        padding: 5%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Una columna para pantallas más pequeñas */
+    }
+
+    .search-bar{
+        display: inline-flex;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-top: 10px;
+    }
+
+    mark {
+        padding: 10px 100px; /* Reducir padding del título en pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .secciones h1 {
+        font-size: 50px;
+        padding: 4%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    mark {
+        padding: 10px 50px;
+    }
+    
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .secciones h1 {
+        font-size: 40px;
+        padding: 5%;
+    }
+
+    .search-bar{
+        margin: 0 20px;
+        display: flex;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .search-container {
+        padding: 5% 2%;
+    }
+
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    mark {
+        padding: 10px 10px;
+    }
+}
+
+/* Ajustes para pantallas de hasta 375px */
+@media (max-width: 375px) {
+    .secciones h1 {
+        font-size: 40px;
+        padding: 5%;
+    }
+
+    .search-bar{
+        margin: 0 20px;
+        display: flex;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .search-container {
+        padding: 5% 2%;
+    }
+
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    mark {
+        padding: 10px 10px;
+    }
 }
