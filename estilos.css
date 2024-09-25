@@ -51,6 +51,7 @@ mark {
 
 .search-bar button:hover {
     background-color: #005eff;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 /* Contenedor de la barra de búsqueda y el texto */
@@ -66,7 +67,7 @@ mark {
     font-size: 1rem;
     margin-left: 20px;
     border-radius: 4px;
-    background: #2A1E5C;
+    background: #2A1E5C;  /* Color inicial */
     padding: 8px 16px;
     border: none;
     cursor: pointer;
@@ -110,6 +111,15 @@ mark {
 
 #indice:hover + .menu-desplegable {
     display: block;
+}
+
+#indice:hover {
+    background-color: #005eff;  /* Mismo azul que el botón de buscar */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#indice {
+    background-color: #2A1E5C;
 }
 
 .menu-desplegable:hover {
@@ -271,7 +281,7 @@ footer {
     mark {
         padding: 10px 50px;
     }
-    
+
     nav ul li {
         margin: 5px;
         padding: 10px;
