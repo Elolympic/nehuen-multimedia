@@ -1,0 +1,600 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+header {
+    background-color: #2A1E5C;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Font family */
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 200;
+}
+
+/* Titulo inicial */
+
+mark {
+    background-color: #2A1E5C;
+    padding: 10px 200px;
+    color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 12px rgb(154, 154, 154);
+}
+
+/* Barra de búsqueda */
+
+.search-bar {
+    display: inline-block;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 20px;
+    border: 2px solid #edf2f4;
+    border-radius: 4px;
+    outline: none;
+    color: #2b2d42;
+}
+
+.search-bar button {
+    background-color: #2A1E5C;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.search-bar button:hover {
+    background-color: #005eff;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Contenedor de la barra de búsqueda y el texto */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 7% 0;
+}
+
+.search-text {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 20px;
+    border-radius: 4px;
+    background: #2A1E5C;  /* Color inicial */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-text :hover {
+    background-color: #005eff;
+}
+
+/* Menú desplegable oculto por defecto */
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    background-color: #2A1E5C;
+    border-radius: 10px;
+    padding: 10px;
+    top: 34%; /* Ajusta la posición del menú */
+    left: 8%;
+    z-index: 1;
+}
+
+.menu-desplegable li {
+    padding: 10px;
+    margin: 0;
+    background-color: #2A1E5C;
+    list-style: none;
+}
+
+.menu-desplegable li:hover {
+    background-color: #0AD3FF;
+}
+
+.menu-desplegable li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-desplegable li:hover a {
+    color: #000000;
+}
+
+#indice:hover + .menu-desplegable {
+    display: block;
+}
+
+#indice:hover {
+    background-color: #0AD3FF;  /* Mismo azul que el botón de buscar */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#indice {
+    background-color: #2A1E5C;
+}
+
+.menu-desplegable:hover {
+    display: block;
+}
+
+/* Secciones */
+
+nav {
+    padding: 0 0 20px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 60px 0 60px 60px;
+    padding: 2px 12px 4px 12px;
+    background: #2A1E5C;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 6px 6px 12px rgb(154, 154, 154);
+    font-weight: 400;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    background-color: #0AD3FF;
+}
+
+nav ul li:hover a {
+    color: #ffffff;
+}
+
+.secciones {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.secciones h1 {
+    font-size: 80px;
+    padding: 8%;
+}
+
+/* Informacion */
+
+.informacion {
+    background-color: #0AD3FF;
+    width: 100%;
+    padding: 16%;
+    text-align: center;
+    position: relative;
+    align-items: center;
+}
+
+.informacion h2 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center; /* Centrar el título */
+}
+
+.informacion p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.informacion-carrusel {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+}
+
+.informacion-slides {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.informacion-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+
+/* Indicadores del carrusel */
+.boton-carrusel {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.boton-carrusel:hover {
+    color: #2A1E5C;
+}
+
+.indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circulo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 5px;
+    border: 2px solid #2A1E5C;
+    cursor: pointer;
+}
+
+.circulo:hover {
+    background-color: #2A1E5C;
+}
+
+/* IMAGENES */
+
+#slide1 {
+    background-image: url('img/museo1.png'); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    color: #ffffff; /* Cambia el color del texto si es necesario */
+    height: 100%; /* Ajusta la altura según sea necesario */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    position: relative; /* Asegura que los elementos hijos se posicionen correctamente */
+    overflow: hidden; /* Evita que se muestren elementos fuera del contenedor */
+}
+
+/* Alinear las flechas a los extremos */
+.informacion-nav .prev {
+    position: absolute;
+    left: -200px;
+}
+
+.informacion-nav .next {
+    position: absolute;
+    right: -200px;
+}
+
+/* Ultima informacion */
+
+.content {
+    background-color: #2b2d42;
+    padding: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #8ecae6;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #023047;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #023047;
+}
+
+footer {
+    background-color: #2b2d42;
+    color: #8d99ae;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media Queries para hacer la página responsive */
+
+/* Ajustes para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    .secciones h1 {
+        font-size: 60px;
+        padding: 5%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Una columna para pantallas más pequeñas */
+    }
+
+    .search-bar{
+        display: inline-flex;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        margin-top: 10px;
+    }
+
+    mark {
+        padding: 10px 100px; /* Reducir padding del título en pantallas pequeñas */
+    }
+
+    .informacion h2 {
+        font-size: 30px;
+    }
+
+    .informacion p {
+        font-size: 10px;
+    }
+
+    .informacion-nav button {
+        padding: 1px;
+        margin: -10px;
+        font-size: 30px;
+    }
+
+    .informacion-nav .prev {
+        position: absolute;
+        left: -20px;
+    }
+    
+    .informacion-nav .next {
+        position: absolute;
+        right: -20px;
+    }
+
+    .circulo {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 5px;
+        border: 2px solid #2A1E5C;
+        cursor: pointer;
+    }
+}
+
+/* Ajustes para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .secciones h1 {
+        font-size: 50px;
+        padding: 4%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    mark {
+        padding: 10px 50px;
+    }
+
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .informacion h2 {
+        font-size: 30px;
+    }
+
+    .informacion p {
+        font-size: 10px;
+    }
+
+    .informacion-nav button {
+        padding: 1px;
+        margin: -10px;
+        font-size: 30px;
+    }
+
+    .informacion-nav .prev {
+        position: absolute;
+        left: -20px;
+    }
+    
+    .informacion-nav .next {
+        position: absolute;
+        right: -20px;
+    }
+
+    .circulo {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 5px;
+        border: 2px solid #2A1E5C;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 430px) {
+    .secciones h1 {
+        font-size: 40px;
+        padding: 5%;
+    }
+
+    .search-bar{
+        margin: 0 20px;
+        display: flex;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .search-container {
+        padding: 5% 2%;
+    }
+
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    mark {
+        padding: 10px 10px;
+    }
+
+    .informacion h2 {
+        font-size: 30px;
+    }
+
+    .informacion p {
+        font-size: 10px;
+    }
+
+    .informacion-nav button {
+        padding: 1px;
+        margin: -10px;
+        font-size: 30px;
+    }
+
+    .informacion-nav .prev {
+        position: absolute;
+        left: -20px;
+    }
+    
+    .informacion-nav .next {
+        position: absolute;
+        right: -20px;
+    }
+
+    .circulo {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 5px;
+        border: 2px solid #2A1E5C;
+        cursor: pointer;
+    }
+}
+
+/* Ajustes para pantallas de hasta 375px */
+@media (max-width: 375px) {
+    .secciones h1 {
+        font-size: 40px;
+        padding: 5%;
+    }
+
+    .search-bar{
+        margin: 0 20px;
+        display: flex;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .search-container {
+        padding: 5% 2%;
+    }
+
+    nav ul li {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    mark {
+        padding: 10px 10px;
+    }
+
+    .informacion h2 {
+        font-size: 30px;
+    }
+
+    .informacion p {
+        font-size: 10px;
+    }
+
+    .informacion-nav button {
+        padding: 1px;
+        margin: -10px;
+        font-size: 30px;
+    }
+
+    .informacion-nav .prev {
+        position: absolute;
+        left: -20px;
+    }
+    
+    .informacion-nav .next {
+        position: absolute;
+        right: -20px;
+    }
+
+    .circulo {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 5px;
+        border: 2px solid #2A1E5C;
+        cursor: pointer;
+    }
+}

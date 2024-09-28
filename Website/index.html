@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVARTE</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="">
+    </header>
+
+    <section class="secciones">
+        <div class="search-container">
+            <span class="search-text" id="indice">Indice</span>
+            <ul class="menu-desplegable">
+                <li><a href="#">Sección 1</a></li>
+                <li><a href="#">Sección 2</a></li>
+                <li><a href="#">Sección 3</a></li>
+                <li><a href="#">Sección 4</a></li>
+            </ul>
+            <form class="search-bar" action="#" method="GET">
+                <input type="text" placeholder="Buscar..." name="search">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <h1><mark>Arte Moderno</mark></h1>
+        <nav class="Paginas">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">NFT'S</a></li>
+                <li><a href="#">Arte con IA</a></li>
+                <li><a href="#">Danzas Modernas</a></li>
+                <li><a href="#">Arte digital</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="informacion">
+        <div class="informacion-carrusel">
+            <div class="slides">
+                <div class="slide" id="slide1">
+                    <h2>Tendencia 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor varius lorem ut aliquam.</p>
+                </div>
+                <div class="slide" id="slide2">
+                    <h2>Tendencia 2</h2>
+                    <p>Curabitur vehicula libero a turpis volutpat, at convallis libero viverra.</p>
+                </div>
+                <div class="slide" id="slide3">
+                    <h2>Tendencia 3</h2>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                </div>
+                <div class="slide" id="slide4">
+                    <h2>Tendencia 4</h2>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada.</p>
+                </div>
+            </div>
+    
+            <div class="informacion-nav">
+                <button class="boton-carrusel prev" onclick="prevSlide()">❮</button>
+                <button class="boton-carrusel next" onclick="nextSlide()">❯</button>
+            </div>
+
+            <div class="indicadores">
+                <div class="circulo" onclick="showSlide(1)"></div>
+                <div class="circulo" onclick="showSlide(2)"></div>
+                <div class="circulo" onclick="showSlide(3)"></div>
+                <div class="circulo" onclick="showSlide(4)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="grid">
+            <div class="card">
+                <h3>Tendencia 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card">
+                <h3>Tendencia 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card">
+                <h3>Tendencia 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card">
+                <h3>Tendencia 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 INNOVARTE - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
