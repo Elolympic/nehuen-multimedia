@@ -1,32 +1,32 @@
-let currentSlide = 1;
-showSlide(currentSlide);
+let currentSlide = 1; // Variable que guarda la diapositiva actual
+showSlide(currentSlide); // Selecciona todas las diapositivas
 
-function showSlide(n) {
-    const slides = document.querySelectorAll('.slide');
-    const circles = document.querySelectorAll('.circulo');
+function showSlide(n) { // Función para mostrar una diapositiva específica
+    const slides = document.querySelectorAll('.slide'); // Selecciona todas las diapositivas
+    const circles = document.querySelectorAll('.circulo'); // Selecciona todos los indicadores (círculos)
 
-    if (n > slides.length) {
-        currentSlide = 1;
+    if (n > slides.length) { // Si n es mayor que el número de diapositivas
+        currentSlide = 1; // Regresa a la primera diapositiva
     }
-    if (n < 1) {
-        currentSlide = slides.length;
+    if (n < 1) { // Si n es menor que 1
+        currentSlide = slides.length; // Va a la última diapositiva
     }
 
     slides.forEach((slide) => {
         slide.style.display = 'none'; // Ocultar todas las diapositivas
     });
     circles.forEach((circle) => {
-        circle.style.backgroundColor = '#fff'; // Resetear color de los círculos
+        circle.style.backgroundColor = '#fff'; // Resetea el color de los círculos
     });
 
-    slides[currentSlide - 1].style.display = 'block'; // Mostrar la diapositiva actual
-    circles[currentSlide - 1].style.backgroundColor = '#2A1E5C'; // Cambiar el color del círculo activo
+    slides[currentSlide - 1].style.display = 'block'; // Muestra la diapositiva actual
+    circles[currentSlide - 1].style.backgroundColor = '#2A1E5C'; // Cambia el color del círculo activo
 }
 
 function nextSlide() {
-    showSlide(currentSlide += 1);
+    showSlide(currentSlide += 1); // Aumenta currentSlide en 1 y muestra la siguiente diapositiva
 }
 
 function prevSlide() {
-    showSlide(currentSlide -= 1);
+    showSlide(currentSlide -= 1); // Disminuye currentSlide en 1 y muestra la diapositiva anterior
 }
