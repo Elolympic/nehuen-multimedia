@@ -241,14 +241,14 @@ nav ul li:hover a {
 
 .slide h2, .slide p {
     z-index: 1;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 0%;
 }
 
-/* Para asegurar que el texto esté centrado verticalmente */
 .slide h2 {
-    font-size: 5rem; /* Ajusta el tamaño según lo que necesites */
+    font-size: 5rem;
+    margin-top: 12%;
+    padding: 0px;
 }
 
 .slide p {
@@ -256,13 +256,11 @@ nav ul li:hover a {
     padding: 0 30%;
 }
 
-/* resaltado */
-
 .resaltado {
-    background-color: #0AD3FF;
-    padding: 10px;
-    border-radius: 5px;
-    color: white; /* Opcional para cambiar el color del texto */
+    background-color: #2a1e5c83;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    margin: 10px;
 }
 
 .informacion-nav {
