@@ -125,6 +125,7 @@ mark {
 #indice:hover {
     background-color: #0AD3FF;  /* Mismo azul que el botón de buscar */
     transition: background-color 0.3s ease; /* Transición suave */
+    color: #000000;
 }
 
 #indice {
@@ -247,20 +248,18 @@ nav ul li:hover a {
 
 .slide h2 {
     font-size: 5rem;
-    margin-top: 12%;
-    padding: 0px;
+    margin-top: 10%;
 }
 
 .slide p {
     font-size: 1.5rem;
-    padding: 0 30%;
+    padding: 2% 30%;
+    line-height: 120%;
 }
 
 .resaltado {
-    background-color: #2a1e5c83;
-    padding: 10px 20px;
+    background-color: #2a1e5cc5;
     color: rgb(255, 255, 255);
-    margin: 10px;
 }
 
 .informacion-nav {
