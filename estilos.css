@@ -160,6 +160,12 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
+nav ul li a.activo {
+    background-color: #0AD3FF;
+    color: #000000;
+    border: none;
+}
+
 nav ul li:hover {
     transform: scale(1.1);
     background-color: #0AD3FF;
@@ -334,20 +340,50 @@ nav ul li:hover a {
   }
 
   #slide1::after:hover {
-    background-color: rgba(255, 0, 0, 0.1); /* Efecto hover opcional */
+    background-color: rgba(255, 0, 0, 0.1);
   }
 
 #slide2 {
     background-image: url('img/museo2.jpg'); /* Cambia esto a la ruta de tu imagen */
 }
 
+#slide2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
 #slide3 {
-    background-image: url('img/museo1.png'); /* Cambia esto a la ruta de tu imagen */
+    background-image: url('img/museo3.jpg'); /* Cambia esto a la ruta de tu imagen */
 }
 
+#slide3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
 #slide4 {
-    background-image: url('img/museo1.png'); /* Cambia esto a la ruta de tu imagen */
+    background-image: url('img/museo4.webp'); /* Cambia esto a la ruta de tu imagen */
 }
+
+#slide4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
 
 /* Alinear las flechas a los extremos */
 .informacion-nav .prev {

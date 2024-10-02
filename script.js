@@ -30,3 +30,19 @@ function nextSlide() {
 function prevSlide() {
     showSlide(currentSlide -= 1); // Disminuye currentSlide en 1 y muestra la diapositiva anterior
 }
+
+document.querySelector('#slide1').addEventListener('click', function() {
+    window.location.href = 'https://museomoderno.org/';
+  });
+
+  document.querySelector('#slide2').addEventListener('click', function() {
+    window.location.href = 'https://turismo.buenosaires.gob.ar/es/otros-establecimientos/planetario-galileo-galilei';
+  });
+
+  document.querySelector('#slide3').addEventListener('click', function() {
+    window.location.href = 'https://www.mpc.org.ar/datos_utiles/index.htm';
+  });
+
+  document.querySelector('#slide4').addEventListener('click', function() {
+    window.location.href = 'https://www.arenacomunicacion.com/museos/';
+  });
