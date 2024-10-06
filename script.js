@@ -46,3 +46,10 @@ document.querySelector('#slide1').addEventListener('click', function() {
   document.querySelector('#slide4').addEventListener('click', function() {
     window.location.href = 'https://www.arenacomunicacion.com/museos/';
   });
+
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('nav ul li a.activo').classList.remove('activo');
+        this.classList.add('activo');
+    });
+});

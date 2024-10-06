@@ -185,6 +185,21 @@ nav ul li:hover a {
     padding: 8%;
 }
 
+/* Presentacion */
+
+.presentacion {
+    background-color:white;
+    width: 100%;
+    min-height: 400px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 22%;
+    border-top-style: solid;
+    border-width: 5px;
+}
+
 /* Informacion */
 
 .informacion {
@@ -415,21 +430,86 @@ nav ul li:hover a {
 }
 
 .caja {
-    background-color: #8ecae6;
+    background-color: #0AD3FF;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    background-size: cover;
+    min-height: 400px;
+    max-height: 600px;
+    position: relative; /* Importante para que el overlay se posicione correctamente */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+#caja1 {
+    background-image: url('img/teamlab.webp');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja2 {
+    background-image: url('img/artechouse.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja3 {
+    background-image: url('img/digitalart.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja4 {
+    background-image: url('img/vangogh.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
 }
 
 .caja h3 {
-    color: #023047;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    color: white;
 }
 
 .caja p {
-    color: #023047;
+    font-size: 2rem;
+    color: white;
 }
+
+.cuadrado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Inicialmente invisible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* Transición suave */
+}
+
+.texto-cuadrado p {
+    color: white;
+    text-align: center;
+    padding: 10%;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.caja:hover .cuadrado {
+    opacity: 1; /* Muestra el cuadrado cuando el mouse está sobre la caja */
+}
+
+/* Footer */
 
 footer {
     background-color: #2b2d42;
@@ -532,21 +612,6 @@ footer {
         background-color: #2b2d42;
         padding: 20px;
     }
-    
-    .grilla {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .caja {
-        background-color: #8ecae6;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-    }
 
     .slide h2, .slide p {
         z-index: 1;
@@ -574,6 +639,36 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 10px;
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .caja {
+        background-color: #0AD3FF;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        background-size: cover;
+        min-height: 300px;
+        max-height: 600px;
+        line-height: 250%;
+    }
+
+    .caja h3 {
+        font-size: 3rem;
+        color: white;
+        margin-bottom: -2%;
+    }
+    
+    .caja p {
+        font-size: 1rem;
+        color: white;
     }
 }
 
@@ -660,21 +755,6 @@ footer {
         background-color: #2b2d42;
         padding: 20px;
     }
-    
-    .grilla {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .caja {
-        background-color: #8ecae6;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-    }
 
     .slide h2, .slide p {
         z-index: 1;
@@ -702,6 +782,36 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 10px;
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .caja {
+        background-color: #0AD3FF;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        background-size: cover;
+        min-height: 200px;
+        max-height: 600px;
+        line-height: 250%;
+    }
+
+    .caja h3 {
+        font-size: 3rem;
+        color: white;
+        margin-bottom: -2%;
+    }
+    
+    .caja p {
+        font-size: 1rem;
+        color: white;
     }
 }
 
@@ -796,21 +906,6 @@ footer {
         background-color: #2b2d42;
         padding: 20px;
     }
-    
-    .grilla {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .caja {
-        background-color: #8ecae6;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-    }
 
     .slide h2, .slide p {
         z-index: 1;
@@ -838,6 +933,35 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 10px;
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .caja {
+        background-color: #0AD3FF;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        background-size: cover;
+        min-height: 100px;
+        max-height: 600px;
+        line-height: 140%;
+    }
+
+    .caja h3 {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .caja p {
+        font-size: 0.5rem;
+        color: white;
     }
 }
 
@@ -933,21 +1057,6 @@ footer {
         background-color: #2b2d42;
         padding: 20px;
     }
-    
-    .grilla {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .caja {
-        background-color: #8ecae6;
-        padding: 10px;
-        border-radius: 8px;
-        text-align: center;
-    }
 
     .slide h2, .slide p {
         z-index: 1;
@@ -975,5 +1084,34 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 10px;
+    }
+
+    .grilla {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .caja {
+        background-color: #0AD3FF;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        background-size: cover;
+        min-height: 100px;
+        max-height: 600px;
+        line-height: 140%;
+    }
+
+    .caja h3 {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .caja p {
+        font-size: 0.5rem;
+        color: white;
     }
 }
