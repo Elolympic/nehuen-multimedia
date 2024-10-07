@@ -527,13 +527,33 @@ nav ul li:hover a {
     opacity: 1; /* Muestra el cuadrado cuando el mouse está sobre la caja */
 }
 
+/* E-mail */
+
+.email {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;  /* Alinea el formulario a la derecha */
+    align-items: center; /* Alinea el formulario verticalmente al centro */
+    padding-right: 11%;
+    padding-left: 11%;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #6e6e6e68;
+}
+
+.email .search-bar input[type="text"] {
+    width: 300px;
+}
+
 /* Footer */
 
 footer {
-    background-color: #2b2d42;
+    background-color: #ffffff;
     color: #8d99ae;
     text-align: center;
-    padding: 20px;
+    height: 300px;
+    display: flex;
 }
 
 .contacto a {
@@ -543,6 +563,48 @@ footer {
 
 .contacto a:hover {
     color: #0AD3FF;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    max-width: 2000px;
+    margin: 10%;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 1.5;
+    position: absolute;
+    padding: 0 0 0 31%;
+}
+
+.footer-qr {
+    display:flex;
+    position: absolute;
+    padding: 0 0 0 75%;
+}
+
+.qr-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Media Queries para hacer la página responsive */
