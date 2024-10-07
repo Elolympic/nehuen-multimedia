@@ -30,7 +30,7 @@ mark {
     background-color: #2A1E5C;
     padding: 10px 200px;
     color: rgb(255, 255, 255);
-    box-shadow: 10px 10px 12px rgb(154, 154, 154);
+    box-shadow: 10px 10px 12px rgb(0, 0, 0);
 }
 
 /* Barra de búsqueda */
@@ -96,6 +96,7 @@ mark {
     top: 34%; /* Ajusta la posición del menú */
     left: 8%;
     z-index: 1;
+    text-align: left;
 }
 
 .menu-desplegable li {
@@ -148,7 +149,7 @@ nav ul li {
     padding: 2px 12px 4px 12px;
     background: #2A1E5C;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 6px 6px 12px rgb(154, 154, 154);
+    box-shadow: 6px 6px 12px rgb(0, 0, 0);
     font-weight: 400;
 }
 
@@ -183,6 +184,10 @@ nav ul li:hover a {
 .secciones h1 {
     font-size: 80px;
     padding: 8%;
+}
+
+#degrade {
+    background-image: linear-gradient(to right, #2e4584 , #cb506d);
 }
 
 /* Presentacion */
