@@ -898,18 +898,76 @@ footer {
         background-size: cover;
         min-height: 200px;
         max-height: 600px;
-        line-height: 250%;
+        line-height: 80%;
     }
 
-    .caja h3 {
-        font-size: 3rem;
+    .texto-cuadrado p {
         color: white;
-        margin-bottom: -2%;
+        text-align: center;
+        padding: 2% 7%;
+        font-size: 0.7rem;
+        letter-spacing: 0px;
+        margin: auto;
     }
     
-    .caja p {
-        font-size: 1rem;
+    .texto-cuadrado h4 {
         color: white;
+        font-size: 1rem;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+    
+    .texto-cuadrado h3 {
+        color: white;
+        font-size: 2rem;
+        margin-top: 5px;
+    }
+
+    .email {
+        background-color: white;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;  /* Alinea el formulario a la derecha */
+        align-items: center; /* Alinea el formulario verticalmente al centro */
+        padding-right: 5%;
+        padding-left: 5%;
+    
+    }
+    
+    .email .search-bar input[type="text"] {
+        width: 200px;
+    }
+
+    .email h2 {
+        font-size: 1.5rem;
+    }
+
+    .email button {
+        padding: 2px 6px;
+        font-size: 16px;
+    }
+
+    .footer-social {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+    .footer-info {
+        flex: 2; /* El texto ocupará más espacio que los iconos sociales y el QR */
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .qr-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -1049,17 +1107,76 @@ footer {
         background-size: cover;
         min-height: 100px;
         max-height: 600px;
-        line-height: 140%;
+        line-height: 40%;
     }
 
-    .caja h3 {
-        font-size: 1.5rem;
+    .texto-cuadrado p {
         color: white;
+        text-align: center;
+        padding: 2% 7%;
+        font-size: 0.3rem;
+        letter-spacing: 0px;
+        margin: auto;
     }
     
-    .caja p {
-        font-size: 0.5rem;
+    .texto-cuadrado h4 {
         color: white;
+        font-size: 0.5rem;
+        font-weight: 100;
+        margin-top: 10px;
+    }
+    
+    .texto-cuadrado h3 {
+        color: white;
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .email {
+        background-color: white;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;  /* Alinea el formulario a la derecha */
+        align-items: center; /* Alinea el formulario verticalmente al centro */
+        padding-right: 2%;
+        padding-left: 3%;
+    
+    }
+    
+    .email .search-bar input[type="text"] {
+        width: 100px;
+    }
+
+    .email h2 {
+        font-size: 1rem;
+    }
+
+    .email button {
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+
+    .footer-social {
+        gap: 5px;
+    }
+    
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+    }
+    
+    .footer-info {
+        flex: 2; /* El texto ocupará más espacio que los iconos sociales y el QR */
+        font-size: 8px;
+        line-height: 1.5;
+    }
+    
+    .qr-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 }
 
