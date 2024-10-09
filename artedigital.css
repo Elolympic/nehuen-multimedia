@@ -194,6 +194,23 @@ nav ul li:hover a {
     background-image: linear-gradient(to right, #2e4584 , #cb506d);
 }
 
+/* E-mail */
+
+.email {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;  /* Alinea el formulario a la derecha */
+    align-items: center; /* Alinea el formulario verticalmente al centro */
+    padding-right: 11%;
+    padding-left: 11%;
+
+}
+
+.email .search-bar input[type="text"] {
+    width: 250px;
+}
+
 /* Footer */
 
 footer {
