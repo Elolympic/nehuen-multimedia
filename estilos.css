@@ -119,6 +119,11 @@ mark {
 
 /* Estilos del menú principal */
 
+.menu-principal {
+    display: flex;
+    justify-content: center;
+}
+
 nav.menu-principal {
     background-color: #efefef;
     padding: 15px 0;
@@ -127,12 +132,12 @@ nav.menu-principal {
 nav.menu-principal ul {
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
-    padding: 0;
 }
 
 nav.menu-principal ul li {
     font-size: 16px;
+    padding: 0 8px;
+
 }
 
 nav.menu-principal ul li a {
@@ -256,9 +261,6 @@ nav.menu-principal ul li a.active {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
-    visibility: hidden; /* Inicialmente oculto */
-    opacity: 0; /* Invisible */
-    transition: visibility 0s, opacity 0.5s ease-in-out; /* Transición suave */
 }
 
 .slide:hover .resaltado {
@@ -424,7 +426,7 @@ nav.menu-principal ul li a.active {
     text-align: center;
 }
 
-.lo-nuevo-del-arte .contenido {
+.lo-nuevo-del-arte .arte-info {
     max-width: 1200px; /* Ancho máximo del contenido */
     margin: 0 auto; /* Centrar el contenido horizontalmente */
 }
@@ -455,8 +457,8 @@ nav.menu-principal ul li a.active {
 /* Captura de pantalla 2024-10-27 a la(s) 3.24.43 p. m. 1 */
 
 .galeria {
-    width: 80%; /* Ancho del contenedor */
-    height: 700px; /* Altura del contenedor */
+    width: 82%; /* Ancho del contenedor */
+    height: 730px; /* Altura del contenedor */
     background: url(/img/galeria.png); /* Ruta de la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size: contain; /* Escala la imagen para que quepa en el contenedor */
@@ -464,6 +466,107 @@ nav.menu-principal ul li a.active {
     margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
+.contenido {
+    padding: 40px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caja {
+    background-color: #2A1E5C;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-size: cover;
+    min-height: 400px;
+    max-height: 600px;
+    position: relative; /* Importante para que el overlay se posicione correctamente */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+#caja1 {
+    background-image: url('img/teamlab.webp');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja2 {
+    background-image: url('img/artechouse.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja3 {
+    background-image: url('img/digitalart.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+#caja4 {
+    background-image: url('img/vangogh.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+}
+
+.cuadrado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0; /* Inicialmente invisible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* Transición suave */
+}
+
+.texto-cuadrado p {
+    color: white;
+    text-align: center;
+    padding: 1% 10%;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.texto-cuadrado h4 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.texto-cuadrado h3 {
+    font-size: 4rem;
+}
+
+.texto-cuadrado a {
+    color: #EE4266;
+    text-decoration: none;
+}
+
+.texto-cuadrado a:hover {
+    color: #0AD3FF;
+}
+
+.caja:hover .cuadrado {
+    opacity: 1; /* Muestra el cuadrado cuando el mouse está sobre la caja */
+}
 
 /* E-mail */
 
@@ -493,7 +596,7 @@ nav.menu-principal ul li a.active {
     align-items: center; /* Centrar contenido verticalmente */
 }
 
-.footer-contenido {
+.footer-info {
     display: flex;
     justify-content: space-between; /* Espaciado entre redes sociales y formulario */
     align-items: center; /* Asegura alineación vertical general */
@@ -654,11 +757,10 @@ nav.menu-principal ul li a.active {
     /* Galería */
     .galeria {
         width: 100%; /* Asegura que ocupe todo el ancho disponible */
-        height: auto; /* Ajusta la altura automáticamente */
     }
 
     /* Footer */
-    .footer-contenido {
+    .footer-info {
         gap: 20px; /* Espaciado entre elementos */
         text-align: center;
     }
