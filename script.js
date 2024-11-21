@@ -105,3 +105,12 @@ document.addEventListener("DOMContentLoaded", function () {
         suscripcionFormulario.style.marginTop = `${diferencia / 2}px`;
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menuPrincipal = document.getElementById("menu-principal");
+
+    hamburguesa.addEventListener("click", function () {
+        menuPrincipal.classList.toggle("show"); // Alternar clase .show
+    });
+});

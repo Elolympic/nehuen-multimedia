@@ -36,6 +36,18 @@ header .perfil img {
     height: 60px;
 }
 
+/* Botón hamburguesa */
+.hamburguesa {
+    display: none; /* Oculto por defecto */
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #333;
+    position: absolute;
+    left: 20px; /* Posicionado a la izquierda */
+    top: 20px;
+    z-index: 100; /* Asegura que quede por encima del contenido */
+}
+
 /* Font family */
 
 h1, h2, h3, h4, h5 {
@@ -106,6 +118,7 @@ mark {
 }
 
 /* Estilos del menú principal */
+
 nav.menu-principal {
     background-color: #efefef;
     padding: 15px 0;
@@ -159,7 +172,6 @@ nav.menu-principal ul li a.active {
 .informacion {
     background-color: #2A1E5C; /* Mantiene el color de fondo celeste */
     width: 100%;
-    min-height: 600px; /* Aumenta la altura mínima según el diseño que deseas */
     text-align: center;
     position: relative;
     display: flex; /* Para centrar verticalmente el contenido */
@@ -557,4 +569,167 @@ nav.menu-principal ul li a.active {
 .suscripcion-formulario button:hover {
     background-color: #4caef0; /* Cambio de color en hover */
 }
+
 /* Media Queries para hacer la página responsive */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    header .perfil img {
+        width: 50px; /* Reduce el tamaño del ícono de perfil */
+        height: 50px;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburguesa {
+        display: block; /* Mostrar botón hamburguesa en pantallas pequeñas */
+    }
+
+    .menu-principal {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #efefef;
+        width: 100%;
+        flex-direction: column; /* Apilar enlaces */
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    .menu-principal.show {
+        display: flex; /* Mostrar el menú cuando tenga la clase .show */
+    }
+
+    .menu-principal ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-principal ul li {
+        text-align: left;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .hamburguesa {
+        display: block; /* Mostrar el botón hamburguesa en pantallas pequeñas */
+    }
+
+    /* Carrusel */
+    .informacion-carrusel {
+        height: 400px; /* Ajusta la altura del carrusel */
+    }
+
+    .slide h2 {
+        font-size: 2rem; /* Reduce el tamaño del texto */
+    }
+
+    .slide p {
+        font-size: 1rem;
+        padding: 5%; /* Aumenta el espacio interno */
+    }
+
+    /* Sección "Lo Nuevo del Arte" */
+    .texto-columnas {
+        gap: 20px; /* Reduce el espacio entre las columnas */
+    }
+
+
+    .lo-nuevo-del-arte h2 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+
+    /* Galería */
+    .galeria {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    /* Footer */
+    .footer-contenido {
+        gap: 20px; /* Espaciado entre elementos */
+        text-align: center;
+    }
+
+    .footer-suscripcion {
+        width: 50%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .suscripcion-texto {
+        margin-right: 40%;
+    }
+
+}
+
+/* Pantallas medianas (768px a 1024px, tablets) */
+@media (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 10px 20px;
+    }
+
+    header .perfil img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Menú */
+    nav.menu-principal ul {
+        justify-content: space-around; /* Reduce el espaciado */
+        padding: 0;
+    }
+
+    nav.menu-principal ul li {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    /* Carrusel */
+    .informacion-carrusel {
+        height: 300px;
+    }
+
+    .slide h2 {
+        font-size: 2.5rem;
+    }
+
+    .slide p {
+        font-size: 1.2rem;
+    }
+
+    /* Sección "Lo Nuevo del Arte" */
+    .texto-columnas {
+        gap: 50px;
+    }
+
+    .lo-nuevo-del-arte h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    /* Ajustes específicos para pantallas grandes, si es necesario */
+    .lo-nuevo-del-arte h2 {
+        font-size: 3rem;
+    }
+
+    nav.menu-principal ul li a {
+        font-size: 16px;
+    }
+
+    .slide h2 {
+        font-size: 3.5rem;
+    }
+}
