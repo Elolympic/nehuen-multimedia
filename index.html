@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVARTE</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logonegro-02.png" alt="Logo Innovarte">
+        </div>
+        <div class="perfil">
+            <a href="contacto.html">
+                <img src="img/perfil.png" alt="Icono de perfil">
+            </a>
+        </div>
+    </header>
+
+    <nav class="menu-principal">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Museos inmersivos</a></li>
+            <li><a href="performance.html"><i class="fas fa-chevron-right"></i> Performance e intervenciones</a></li>
+            <li><a href="nfts.html"><i class="fas fa-chevron-right"></i> Arte en el metaverso (NFTs)</a></li>
+            <li><a href="arteia.html"><i class="fas fa-chevron-right"></i> Arte con IA</a></li>
+            <li><a href="danza.html"><i class="fas fa-chevron-right"></i> Danzas modernas</a></li>
+            <li><a href="artedigital.html"><i class="fas fa-chevron-right"></i> Arte digital gráfico</a></li>
+            <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto e información</a></li>                 
+        </ul>
+    </nav>
+
+    <section class="informacion" id="informacion"> <!-- Sección del carrusel -->
+        <div class="informacion-carrusel">
+            <div class="slides"> <!-- Contenedor de las Pantallas -->
+                <div class="slide active" id="slide1">
+                    <div class="cartel">
+                        MAMBA - Buenos Aires
+                    </div>
+                    <div class="resaltado">
+                        <p>El MAMBA (Museo de Arte Moderno de Buenos Aires) se dedica a la exhibición de arte contemporáneo y moderno, ofreciendo experiencias inmersivas a través de exposiciones interactivas y audiovisuales.</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide2">
+                    <div class="cartel">
+                        Planetario Galileo Galilei - Buenos Aires
+                    </div>
+                    <div class="resaltado">
+                        <p>Un ícono de la ciudad, el Planetario ofrece experiencias inmersivas de proyección 360°, enfocadas en astronomía y el universo, con simulaciones que transportan a otros mundos.</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide3">
+                    <div class="cartel">
+                        Prohibido no tocar - Buenos Aires
+                    </div>
+                    <div class="resaltado">
+                        <p>Museo interactivo que invita a los visitantes a experimentar y jugar con las ciencias a través de exhibiciones prácticas, perfectas para todas las edades.</p>
+                    </div>
+                </div>
+                <div class="slide" id="slide4">
+                    <div class="cartel">
+                        Experiencia Arenas - Buenos Aires
+                    </div>
+                    <div class="resaltado">
+                        <p>Experiencia inmersiva en arte digital que fusiona música, luces y proyecciones para crear una atmósfera única.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="informacion-nav"> <!-- Navegación del carrusel -->
+                <button class="boton-carrusel prev" onclick="prevSlide()">❮</button>
+                <button class="boton-carrusel next" onclick="nextSlide()">❯</button>
+            </div>
+    
+            <div class="indicadores"> <!-- Indicadores del carrusel -->
+                <div class="circulo" onclick="showSlide(0)"></div>
+                <div class="circulo" onclick="showSlide(1)"></div>
+                <div class="circulo" onclick="showSlide(2)"></div>
+                <div class="circulo" onclick="showSlide(3)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lo-nuevo-del-arte">
+        <div class="contenido">
+            <h2>LO NUEVO DEL ARTE</h2>
+            <div class="texto-columnas">
+                <div class="columna">
+                    <p>
+                        Te damos la bienvenida a Innovarte, una plataforma creada para apasionados del arte y la innovación. 
+                        En este espacio, exploramos cómo las nuevas tecnologías están transformando el mundo artístico, 
+                        desde museos inmersivos hasta performances contemporáneas.
+                    </p>
+                </div>
+                <div class="columna">
+                    <p>
+                        Nuestro objetivo es ofrecerte un recorrido por las expresiones artísticas más vanguardistas y las 
+                        tendencias que están definiendo el futuro del arte. Explora INNovarte y descubre cómo lo digital 
+                        y lo gráfico se fusionan para crear experiencias únicas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+    </section>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <!-- Redes sociales -->
+            <div class="footer-redes">
+                <a href="#" aria-label="Twitter">
+                    <img src="/img/X-02.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="/img/instagram1.1-02.png" alt="Instagram">
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <img src="/img/facebook1.1-02.png" alt="Facebook">
+                </a>
+            </div>
+    
+            <!-- Suscripción -->
+            <div class="footer-suscripcion">
+                <label for="email" class="suscripcion-texto">Suscríbete para recibir noticias</label>
+                <form class="suscripcion-formulario">
+                    <input type="email" id="email" placeholder="E-mail..." required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

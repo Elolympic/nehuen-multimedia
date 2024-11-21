@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+/* Estilos del header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 5%;
+    border-bottom: 10px solid #2A1E5C;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: #FF6F8D;
+}
+
+header .perfil img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Font family */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 200;
+}
+
+/* Titulo inicial */
+
+mark {
+    background-color: #2A1E5C;
+    padding: 10px 200px;
+    color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 12px rgb(0, 0, 0);
+}
+
+/* Barra de búsqueda */
+
+.search-bar {
+    display: inline-block;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 20px;
+    border: 2px solid #edf2f4;
+    border-radius: 4px;
+    outline: none;
+    color: #2b2d42;
+}
+
+.search-bar button {
+    background-color: #2A1E5C;
+    border: none;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.search-bar button:hover {
+    background-color: #0AD3FF;
+    transition: background-color 0.3s ease; /* Transición suave */
+    color: #000000;
+}
+
+/* Contenedor de la barra de búsqueda y el texto */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 7% 0;
+}
+
+.search-text {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-left: 20px;
+    border-radius: 4px;
+    background: #2A1E5C;  /* Color inicial */
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-text :hover {
+    background-color: #000000;
+}
+
+/* Estilos del menú principal */
+nav.menu-principal {
+    background-color: #efefef;
+    padding: 15px 0;
+}
+
+nav.menu-principal ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+nav.menu-principal ul li {
+    font-size: 16px;
+}
+
+nav.menu-principal ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav.menu-principal ul li a i {
+    margin-right: 8px; /* Espacio entre la flecha y el texto */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav.menu-principal ul li a:hover i {
+    color: #FF6F8D;
+}
+
+nav.menu-principal ul li:hover a {
+    color: #FF6F8D;
+}
+
+nav.menu-principal ul li a:hover {
+    border-bottom: 2px solid #FF6F8D;
+}
+
+nav.menu-principal ul li a.active {
+    color: #FF6F8D; /* Cambia el color del enlace cuando esté activo */
+    font-weight: bold; /* También puedes agregar otros estilos, como negrita */
+    border-left: 3px solid #FF6F8D; /* Añadir una línea al lado izquierdo */
+    background-color: #f9f9f9; /* (Opcional) Agregar un fondo para resaltar la opción activa */
+}
+
+/* Informacion */
+
+.informacion {
+    background-color: #2A1E5C; /* Mantiene el color de fondo celeste */
+    width: 100%;
+    min-height: 600px; /* Aumenta la altura mínima según el diseño que deseas */
+    text-align: center;
+    position: relative;
+    display: flex; /* Para centrar verticalmente el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    border-top-style: solid;
+    border-width: 2px;
+}
+
+.informacion h2 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center; /* Centrar el título */
+}
+
+.informacion p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.informacion-carrusel {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.slides {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.informacion-slides {
+    position: relative;
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover; /* Hace que la imagen cubra todo el área */
+    background-position: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.slide.active {
+    display: flex; /* Esto muestra la slide activa */
+}
+
+.slide h2, .slide p {
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.slide h2 {
+    font-size: 5rem;
+    margin-bottom: -30px; /* Ajusta o elimina el margen inferior */
+}
+
+.slide p {
+    font-size: 1.5rem;
+    padding: 2% 2%;
+}
+
+.resaltado {
+    background-color: #2a1e5cc5;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    visibility: hidden; /* Inicialmente oculto */
+    opacity: 0; /* Invisible */
+    transition: visibility 0s, opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+.slide:hover .resaltado {
+    visibility: visible; /* Se vuelve visible al pasar el mouse */
+    opacity: 1; /* Hace que el texto sea visible */
+}
+
+.informacion-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+
+/* Indicadores del carrusel */
+.boton-carrusel {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.boton-carrusel:hover {
+    color: #2A1E5C;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 20px; /* Posiciona los círculos dentro de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cartel {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: -20px; /* Hace que "salga" del margen izquierdo de la pantalla */
+    background-color: #E91E63; /* Color de fondo del cartel */
+    color: #ffffff; /* Color del texto */
+    font-size: 1rem; /* Tamaño del texto */
+    padding: 5px 30px; /* Espaciado interno */
+    border-top-left-radius: 0px; /* Esquina superior izquierda cuadrada */
+    border-bottom-left-radius: 0px; /* Esquina inferior izquierda cuadrada */
+    border-top-right-radius: 20px; /* Esquina superior derecha redondeada */
+    border-bottom-right-radius: 20px; /* Esquina inferior derecha redondeada */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+    z-index: 10; /* Asegura que el cartel quede sobre otros elementos */
+}
+
+.circulo {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.5; /* Círculos inactivos tienen menor opacidad */
+    transition: opacity 0.3s ease;
+}
+
+.circulo.active {
+    opacity: 1; /* Círculo activo más visible */
+    background-color: #2A1E5C; /* Color del círculo activo (puedes cambiarlo) */
+}
+
+.circulo:hover {
+    background-color: #2A1E5C;
+}
+
+/* IMAGENES */
+
+#slide1 {
+    background-image: url('img/museo1.png'); /* Cambia esto a la ruta de tu imagen */
+}
+
+#slide1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+  #slide1::after:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+
+#slide2 {
+    background-image: url('img/museo2.jpg'); /* Cambia esto a la ruta de tu imagen */
+}
+
+#slide2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+#slide3 {
+    background-image: url('img/museo3.jpg'); /* Cambia esto a la ruta de tu imagen */
+}
+
+#slide3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+#slide4 {
+    background-image: url('img/museo4.webp'); /* Cambia esto a la ruta de tu imagen */
+}
+
+#slide4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+
+/* Alinear las flechas a los extremos */
+.informacion-nav .prev {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.informacion-nav .next {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Ultima informacion */
+
+.lo-nuevo-del-arte {
+    background-color: #2A1E5C; /* Fondo oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center;
+}
+
+.lo-nuevo-del-arte .contenido {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+}
+
+.lo-nuevo-del-arte h2 {
+    font-size: 2.5rem; /* Tamaño del título */
+    text-align: left; /* Alinear el título a la izquierda */
+}
+
+/* Estilo para las columnas de texto */
+.texto-columnas {
+    display: flex; /* Usar flexbox para dividir en columnas */
+    justify-content: space-between; /* Espaciar columnas uniformemente */
+    gap: 200px; /* Espaciado entre columnas */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.texto-columnas .columna {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+}
+
+.texto-columnas p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    line-height: 1.6; /* Altura de línea */
+    margin: 0; /* Elimina márgenes extra */
+}
+
+/* Captura de pantalla 2024-10-27 a la(s) 3.24.43 p. m. 1 */
+
+.galeria {
+    width: 80%; /* Ancho del contenedor */
+    height: 700px; /* Altura del contenedor */
+    background: url(/img/galeria.png); /* Ruta de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: contain; /* Escala la imagen para que quepa en el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+
+/* E-mail */
+
+.email {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;  /* Alinea el formulario a la derecha */
+    align-items: center; /* Alinea el formulario verticalmente al centro */
+    padding-right: 11%;
+    padding-left: 11%;
+
+}
+
+.email .search-bar input[type="text"] {
+    width: 250px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 50px; /* Espaciado interno */
+    display: flex;
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre redes sociales y formulario */
+    align-items: center; /* Asegura alineación vertical general */
+    width: 100%;
+    max-width: 1200px; /* Ancho máximo */
+}
+
+/* Redes Sociales */
+.footer-redes {
+    display: flex; /* Flex para los íconos */
+    align-items: center; /* Asegura que los íconos estén alineados verticalmente */
+    gap: 20px; /* Espaciado entre los íconos */
+}
+
+.footer-redes a {
+    display: inline-block;
+    width: 40px; /* Tamaño del icono */
+    height: 40px;
+}
+
+.footer-redes img {
+    width: 100%; /* Iconos escalables */
+    height: auto;
+}
+
+/* Suscripción */
+.footer-suscripcion {
+    height: 100%; /* Asegura que ocupe toda la altura */
+    margin-bottom: 10px;
+}
+
+.suscripcion-texto {
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.suscripcion-formulario {
+    display: flex; /* Mantiene el input y el botón en una fila */
+    align-items: center; /* Asegura alineación vertical entre input y botón */
+    margin-top: auto; /* Alinea el formulario verticalmente */
+}
+
+.suscripcion-formulario input {
+    padding: 5px 20px; /* Elimina el relleno adicional que empuja el texto */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Bordes redondeados */
+    outline: none;
+    flex: 1; /* El input ocupa todo el espacio disponible */
+    text-align: left; /* Asegura que todo el texto esté alineado a la izquierda */
+}
+
+/* Ajusta el estilo del placeholder */
+.suscripcion-formulario input::placeholder {
+    padding-left: 0; /* Elimina cualquier relleno en el placeholder */
+    text-align: left; /* Asegura que el texto esté pegado al borde izquierdo */
+    color: #ccc; /* Opcional: color del placeholder */
+
+}
+
+.suscripcion-formulario button {
+    padding: 6px 20px;
+    font-size: 1rem;
+    background-color: #2A1E5C; /* Botón en color púrpura */
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.suscripcion-formulario button:hover {
+    background-color: #4caef0; /* Cambio de color en hover */
+}
+/* Media Queries para hacer la página responsive */
