@@ -19,7 +19,6 @@
                 <img src="img/perfil.png" alt="Icono de perfil">
             </a>
         </div>
-            <!-- Botón del menú hamburguesa -->
     <div class="hamburguesa" id="hamburguesa">
         <i class="fas fa-bars"></i>
     </div>
@@ -27,7 +26,7 @@
 
     <nav class="menu-principal" id="menu-principal">
         <ul>
-            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Museos inmersivos</a></li>
+            <li><a href="index.html" class="activo"><i class="fas fa-chevron-right"></i> Museos inmersivos</a></li>
             <li><a href="performance.html"><i class="fas fa-chevron-right"></i> Performance e intervenciones</a></li>
             <li><a href="nfts.html"><i class="fas fa-chevron-right"></i> Arte en el metaverso (NFTs)</a></li>
             <li><a href="arteia.html"><i class="fas fa-chevron-right"></i> Arte con IA</a></li>
@@ -37,9 +36,9 @@
         </ul>
     </nav>
 
-    <section class="informacion" id="informacion"> <!-- Sección del carrusel -->
+    <section class="informacion" id="informacion">
         <div class="informacion-carrusel">
-            <div class="slides"> <!-- Contenedor de las Pantallas -->
+            <div class="slides"> 
                 <div class="slide active" id="slide1">
                     <div class="cartel">
                         MAMBA - Buenos Aires
@@ -74,12 +73,12 @@
                 </div>
             </div>
     
-            <div class="informacion-nav"> <!-- Navegación del carrusel -->
+            <div class="informacion-nav">
                 <button class="boton-carrusel prev" onclick="prevSlide()">❮</button>
                 <button class="boton-carrusel next" onclick="nextSlide()">❯</button>
             </div>
     
-            <div class="indicadores"> <!-- Indicadores del carrusel -->
+            <div class="indicadores">
                 <div class="circulo" onclick="showSlide(0)"></div>
                 <div class="circulo" onclick="showSlide(1)"></div>
                 <div class="circulo" onclick="showSlide(2)"></div>
@@ -110,10 +109,10 @@
         </div>
     </section>
 
-    <section class="contenido" id="contenido"> <!-- Sección de contenido adicional -->
-        <div class="grilla"> <!-- Contenedor para las cajas -->
+    <section class="contenido" id="contenido">
+        <div class="grilla">
             <div class="caja" id="caja1">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
+                <div class="cuadrado">
                     <div class="texto-cuadrado">
                         <h3><a href="https://www.teamlab.art/e/tokyo/" target="_blank">TeamLab Borderless</a></h3>
                         <h4>Tokio, Japón</h4>
@@ -121,7 +120,7 @@
                 </div>
             </div>
             <div class="caja" id="caja2">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
+                <div class="cuadrado">
                     <div class="texto-cuadrado">
                         <h3><a href="https://www.artechouse.com/"> ArtecHouse</a></h3>
                         <h4>Nueva York, Estados Unidos</h4>
@@ -130,7 +129,7 @@
                 </div>
             </div>
             <div class="caja" id="caja3">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
+                <div class="cuadrado">
                     <div class="texto-cuadrado">
                         <h3><a href="https://dam.org/"> The Digital Art Museum</a></h3>
                         <h4>Berlín, Alemania</h4>
@@ -139,7 +138,7 @@
                 </div>
             </div>
             <div class="caja" id="caja4">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
+                <div class="cuadrado">
                     <div class="texto-cuadrado">
                         <h3><a href="https://vangoghexpo.com/"> The Van Gogh Experience</a></h3>
                         <h4>Bilbao, España</h4>
@@ -151,7 +150,6 @@
 
     <footer class="footer">
         <div class="footer-info">
-            <!-- Redes sociales -->
             <div class="footer-redes">
                 <a href="#" aria-label="Twitter">
                     <img src="/img/X-02.png" alt="Twitter">
@@ -164,7 +162,6 @@
                 </a>
             </div>
     
-            <!-- Suscripción -->
             <div class="footer-suscripcion">
                 <label for="email" class="suscripcion-texto">Suscríbete para recibir noticias</label>
                 <form class="suscripcion-formulario">

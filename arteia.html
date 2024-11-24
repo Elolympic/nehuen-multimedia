@@ -7,155 +7,175 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="img/logo.png" alt="Logo Innovarte">
+            <img src="img/logonegro-02.png" alt="Logo Innovarte">
         </div>
         <div class="perfil">
             <a href="contacto.html">
                 <img src="img/perfil.png" alt="Icono de perfil">
             </a>
         </div>
+    <div class="hamburguesa" id="hamburguesa">
+        <i class="fas fa-bars"></i>
+    </div>
     </header>
 
-    <nav class="menu-principal">
+    <nav class="menu-principal" id="menu-principal">
         <ul>
-            <li><a href="index.html" class="active"><i class="fas fa-chevron-right"></i> Museos inmersivos</a></li>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Museos inmersivos</a></li>
             <li><a href="performance.html"><i class="fas fa-chevron-right"></i> Performance e intervenciones</a></li>
             <li><a href="nfts.html"><i class="fas fa-chevron-right"></i> Arte en el metaverso (NFTs)</a></li>
-            <li><a href="arteia.html"><i class="fas fa-chevron-right"></i> Arte con IA</a></li>
+            <li><a href="arteia.html" class="activo"><i class="fas fa-chevron-right"></i> Arte con IA</a></li>
             <li><a href="danza.html"><i class="fas fa-chevron-right"></i> Danzas modernas</a></li>
             <li><a href="artedigital.html"><i class="fas fa-chevron-right"></i> Arte digital gráfico</a></li>
             <li><a href="contacto.html"><i class="fas fa-chevron-right"></i> Contacto e información</a></li>                 
         </ul>
     </nav>
 
-
-    <section class="presentacion" id="presentacion">
-        <p><b>Te damos la bienvenida a Innovarte,</b> una plataforma creada por apasionados del arte y la innovación. En este espacio, exploramos cómo las nuevas tecnologías están transformando el mundo artístico, desde museos inmersivos hasta performances contemporáneas.
-            <b>Nuestro objetivo es ofrecerte un recorrido por las expresiones artísticas más vanguardistas y las tendencias que están definiendo el futuro del arte.</b> Explorá INNovarte y descubrí cómo lo digital y lo gráfico se fusionan para crear experiencias únicas.</p>
+    <section class="seccion-arteia">
+        <div class="arteia-texto">
+            <h2>¿QUÉ ES LA inteligencia artificial?</h2>
+        </div>
+    
+        <div class="descripcion-danza">
+            <p>
+                La<strong> inteligencia artificial</strong> es el aprendizaje y pensamiento complejos hechos por máquinas. El término fue acuñado por el informático John McCarthy en 1955. Al igual que Alan Turing, creía que los ordenadores llegarían a ser capaces de hacerse pasar por humanos. Lo que pueda hacer un sistema de IA específico depende de su algoritmo (o la lista de reglas para resolver un problema). Normalmente, un sistema de aprendizaje automático consta de un banco de datos y un modelo que hace algo con ellos (los analiza, los transforma, etc.). La inteligencia artificial está en todas partes, desde el buscador de Google hasta las recomendaciones de Netflix.
+            </p>
+        </div>
     </section>
 
-    <section class="informacion" id="informacion"> <!-- Sección del carrusel -->
-        <div class="informacion-carrusel">
-            <div class="slides"> <!-- Contenedor de las Pantallas -->
-                <div class="slide" id="slide1">
-                    <div class="resaltado">
-                    <h2>MAMBA</h2>
-                    <p>El MAMBA (Museo de Arte Moderno de Buenos Aires) se dedica a la exhibición de arte contemporáneo y moderno, ofreciendo experiencias inmersivas a través de exposiciones interactivas y audiovisuales.</p>
+    <section class="que-es-arteia-section">
+
+        <div class="que-es-arteia-contenido">
+
+            <div class="que-es-arteia-texto">
+                <h2>¿QUÉ ES EL ARTE IA?</h2>
+                <p>
+                    El arte IA se trata de obras de arte (visuales, sonoras o de otro tipo) generadas mediante un proceso de aprendizaje automático, es decir, una máquina “aprende” una información y la usa para generar una imagen nueva. 
+                    La recogida de datos o las instrucciones pueden estar hechas por humanos, pero la creación es obra de la máquina.
+                </p>
+            </div>
+            
+            <div class="que-es-arteia-imagen">
+                <img src="img/arteaia/arteia.jpg" alt="Ejemplo de Arte IA">
+            </div>
+        </div>
+    </section>
+
+    <section class="informacion-arteia" id="informacion">
+        <h2 class="titulo-carrusel">ARTE GENERADO POR IA: OBRAS VIRALES Y CONTROVERSIAS</h2>
+        <div class="informacion-carrusel2">
+            <div class="slides">
+                <div class="slidearteia active" id="slide8">
+                    <div class="fondo-opaco">
+                        <h3>"Théâtre D’opéra Spatial" (2022)</h3>
+                        <p><strong>Creador:</strong> Jason M. Allen, utilizando Midjourney.</p>
+                        <p><strong>Descripción:</strong> Esta imagen se volvió muy famosa cuando ganó el primer premio en una competencia de arte en la Feria Estatal de Colorado en 2022. La obra tiene una estética de ciencia ficción y muestra una escena majestuosa con un toque de fantasía y surrealismo.</p>
                     </div>
                 </div>
-                <div class="slide" id="slide2">
-                    <div class="resaltado">
-                    <h2>Planetario Galileo Galilei</h2>
-                    <p>Un ícono de la ciudad, el Planetario ofrece experiencias inmersivas de proyección 360°, enfocadas en astronomía y el universo, con simulaciones que transportan a otros mundos.                    </p>
+    
+                <div class="slidearteia" id="slide9">
+                    <div class="fondo-opaco">
+                        <h3>"Otra obra IA"</h3>
+                        <p><strong>Creador:</strong> Christo y Jeanne-Claude</p>
+                        <p><strong>Descripción:</strong> Breve descripción de la obra.</p>
                     </div>
                 </div>
-                <div class="slide" id="slide3">
-                    <div class="resaltado">
-                    <h2>Prohibido No Tocar</h2>
-                    <p> Museo interactivo que invita a los visitantes a experimentar y jugar con las ciencias a través de exhibiciones prácticas, perfectas para todas las edades.                    </p>
-                    </div>
-                </div>
-                <div class="slide" id="slide4">
-                    <div class="resaltado">
-                    <h2>Experiencia Arenas</h2>
-                    <p>Experiencia inmersiva en arte digital que fusiona música, luces y proyecciones para crear una atmósfera única.                    </p>
+    
+                <div class="slidearteia" id="slide10">
+                    <div class="fondo-opaco">
+                        <h3>"Bienal de Venecia"</h3>
+                        <p><strong>Creador:</strong> Nicolás García Uriburu</p>
+                        <p><strong>Descripción:</strong> Una obra de impacto artístico mundial.</p>
                     </div>
                 </div>
             </div>
     
-            <div class="informacion-nav"> <!-- Navegación del carrusel -->
-                <button class="boton-carrusel prev" onclick="prevSlide()">❮</button> <!-- Botón anterior -->
-                <button class="boton-carrusel next" onclick="nextSlide()">❯</button> <!-- Botón siguiente -->
+            <div class="informacion-nav2">
+                <button class="boton-carrusel2 prev" onclick="prevSlide()">❮</button>
+                <button class="boton-carrusel2 next" onclick="nextSlide()">❯</button>
             </div>
+    
+            <div class="indicadores2">
+                <div class="circulo2" onclick="showSlide(0)"></div>
+                <div class="circulo2" onclick="showSlide(1)"></div>
+                <div class="circulo2" onclick="showSlide(2)"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="que-es-arteia-section">
 
-            <div class="indicadores"> <!-- Indicadores del carrusel -->
-                <div class="circulo" onclick="showSlide(1)"></div>
-                <div class="circulo" onclick="showSlide(2)"></div>
-                <div class="circulo" onclick="showSlide(3)"></div>
-                <div class="circulo" onclick="showSlide(4)"></div>
+        <div class="que-es-arteia-contenido">
+            <div class="que-es-arteia-imagen">
+                <img src="img/arteaia/temor al reemplazo.png" alt="Ejemplo de Arte IA">
+            </div>
+            <div class="que-es-arteia-texto">
+                <h2>El temor al reemplazo</h2>
+                <p>
+                    El miedo a la Inteligencia Artificial (IA) es un tema candente y de actualidad. Se debe principalmente al significativo aumento de su uso en una gran variedad de industrias, y su acercamiento a las personas en general, motivado por el gran avance que la IA ha sufrido en los últimos años.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="contenido" id="contenido"> <!-- Sección de contenido adicional -->
-        <div class="grilla"> <!-- Contenedor para las cajas -->
-            <div class="caja" id="caja1">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
-                    <div class="texto-cuadrado">
-                        <h3><a href="https://www.teamlab.art/e/tokyo/" target="_blank">TeamLab Borderless</a></h3>
-                        <h4>Tokio, Japón</h4>
-                        <p>Este museo de arte digital crea mundos interactivos y fluidos donde las fronteras entre las obras se desvanecen, permitiendo a los visitantes moverse dentro de las instalaciones.</p>
-                    </div>
-                </div>
+    <section class="ventajas">
+        <div class="ventajas-contenedor">
+            <div class="ventajas-listado">
+                <h3>Ventajas de la IA</h3>
+                <ul>
+                    <li><strong>Automatización de procesos:</strong> Facilita tareas repetitivas, liberando a los empleados.</li>
+                    <li><strong>Reducción del error humano:</strong> Minimiza errores en tareas mecánicas y permite corrección fácil.</li>
+                    <li><strong>Potencia la creatividad:</strong> Al eliminar tareas rutinarias, los empleados pueden enfocarse en ideas innovadoras.</li>
+                    <li><strong>Precisión y análisis rápido:</strong> Analiza grandes volúmenes de datos en poco tiempo, optimizando la toma de decisiones.</li>
+                    <li><strong>Mejora la toma de decisiones:</strong> Ofrece alternativas basadas en datos y tendencias.</li>
+                    <li><strong>Avances en salud:</strong> Mejora diagnósticos y tratamientos personalizados.</li>
+                    <li><strong>Seguridad y prevención:</strong> Detecta fraudes y diseña estrategias de rescate.</li>
+                    <li><strong>Personalización comercial:</strong> Genera ofertas a medida para cada cliente, mejorando estrategias comerciales.</li>
+                </ul>
             </div>
-            <div class="caja" id="caja2">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
-                    <div class="texto-cuadrado">
-                        <h3><a href="https://www.artechouse.com/"> ArtecHouse</a></h3>
-                        <h4>Nueva York, Estados Unidos</h4>
-                        <p>Espacio dedicado al arte inmersivo y a la tecnología avanzada, donde las instalaciones exploran la intersección entre arte, ciencia y creatividad digital.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="caja" id="caja3">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
-                    <div class="texto-cuadrado">
-                        <h3><a href="https://dam.org/"> The Digital Art Museum</a></h3>
-                        <h4>Berlín, Alemania</h4>
-                        <p>Especializado en arte digital, el D.A.M ofrece exposiciones que integran tecnología avanzada con las bellas artes, sumergiendo a los visitantes en obras interactivas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="caja" id="caja4">
-                <div class="cuadrado"> <!-- Cuadrado que se mostrará al hacer hover -->
-                    <div class="texto-cuadrado">
-                        <h3><a href="https://vangoghexpo.com/"> The Van Gogh Experience</a></h3>
-                        <h4>Bilbao, España</h4>
-                        <p>Una exhibición inmersiva que utiliza la tecnología para dar vida a las pinturas de Van Gogh a través de proyecciones a gran escala, sonido envolvente y elementos interactivos.</p>
-                    </div>
-                </div>
+            <div class="desventajas-listado">
+                <h3>Desventajas de la IA</h3>
+                <ul>
+                    <li><strong>Vulneración de derechos:</strong> Riesgo de violación de la privacidad y leyes de protección de datos.</li>
+                    <li><strong>Dificultad con datos:</strong> Eficacia depende de la calidad y actualización de los datos.</li>
+                    <li><strong>Falta de profesionales:</strong> Escasez de técnicos cualificados para su implementación.</li>
+                    <li><strong>Coste elevado:</strong> Altos costos para desarrollar sistemas.</li>
+                    <li><strong>Pérdida de empleos:</strong> Reemplazo de puestos.</li>
+                    <li><strong>Dependencia tecnológica:</strong> Riesgo para el negocio si falla la tecnología.</li>
+                    <li><strong>Falta de empatía:</strong> Toma decisiones sin consideración ética o emocional.</li>
+                    <li><strong>Uso malicioso:</strong> Puede ser utilizada con fines negativos, como el robo de datos.</li>
+                    <li><strong>Falta de personalización:</strong> Atención automatizada podría afectar la diferenciación y cercanía con los clientes.</li>
+                </ul>
             </div>
         </div>
     </section>
+    
 
-    <section class="email">
-        <h2>Recibí noticias de innovarte</h2>
-    <form class="search-bar" action="#" method="GET"> <!-- Formulario de búsqueda -->
-        <input type="text" placeholder="E-mail" name="E-mail"> <!-- texto para búsqueda -->
-        <button type="submit">Suscribirse</button> <!-- Botón para enviar búsqueda -->
-    </form>
-    </section>
-    <hr class="separacion">
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="img/facebook.png" alt="icono facebook" class="social-icon">
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="footer-redes">
+                <a href="#" aria-label="Twitter">
+                    <img src="/img/X-02.png" alt="Twitter">
                 </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="img/instagram.png" alt="icono instagram" class="social-icon">
+                <a href="#" aria-label="Instagram">
+                    <img src="/img/instagram1.1-02.png" alt="Instagram">
                 </a>
-                <a href="https://tiktok.com" target="_blank">
-                    <img src="img/tiktok.png" alt="icono tikTok" class="social-icon">
+                <a href="#" aria-label="Facebook">
+                    <img src="/img/facebook1.1-02.png" alt="Facebook">
                 </a>
             </div>
-            <div class="footer-info">
-                <p>Para más información contáctanos</p>
-                <div class="contacto" id="contacto">
-                    <a href="mailto:innovarte@gmail.com">Innovarte@gmail.com</a>
-                    </div>
-                <p>UADE - FADI</p>
-                <p>&copy; 2024 INNOVARTE - Todos los derechos reservados.</p>
-            </div>
-            <div class="footer-qr">
-                <img src="img/qr.png" alt="codigo qr" class="qr-icon">
+    
+            <div class="footer-suscripcion">
+                <label for="email" class="suscripcion-texto">Suscríbete para recibir noticias</label>
+                <form class="suscripcion-formulario">
+                    <input type="email" id="email" placeholder="E-mail..." required>
+                    <button type="submit">Suscribirse</button>
+                </form>
             </div>
         </div>
     </footer>

@@ -1,32 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtener la ruta actual
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    
-    // Obtener todos los enlaces del menú
-    const menuLinks = document.querySelectorAll('.menu-principal a');
-    
-    // Remover cualquier clase active existente y agregar solo a la página actual
-    menuLinks.forEach(link => {
-        // Obtener el href del enlace y limpiarlo
-        const linkHref = link.getAttribute('href');
-        
-        // Comprobar si el href coincide con la página actual
-        if (linkHref === currentPage) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-    
-    // Agregar event listeners para los clics
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Remover active de todos los enlaces
-            menuLinks.forEach(l => l.classList.remove('active'));
-            // Agregar active al enlace clickeado
-            this.classList.add('active');
-        });
-    });
+const hamburguesa = document.getElementById('hamburguesa');
+const menu = document.getElementById('menu-principal');
+
+hamburguesa.addEventListener('click', () => {
+    menu.classList.toggle('active');
 });
 
 let currentSlide = 0; // Índice de la diapositiva actual
@@ -104,13 +80,4 @@ document.addEventListener("DOMContentLoaded", function () {
         const diferencia = alturaRedes - alturaSuscripcion;
         suscripcionFormulario.style.marginTop = `${diferencia / 2}px`;
     }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburguesa = document.getElementById("hamburguesa");
-    const menuPrincipal = document.getElementById("menu-principal");
-
-    hamburguesa.addEventListener("click", function () {
-        menuPrincipal.classList.toggle("show"); // Alternar clase .show
-    });
 });
