@@ -182,15 +182,12 @@ nav.menu-principal ul li a.activo {
 /* Informacion */
 
 .informacion {
-    background-color: #2A1E5C;
     width: 100%;
     text-align: center;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-style: solid;
-    border-width: 2px;
 }
 
 .informacion h2 {
@@ -752,29 +749,39 @@ nav.menu-principal ul li a.activo {
 
 #slide8 {
     background-image: url('img/arteaia/Théâtre_D’opéra_Spatial.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 #slide9 {
     background-image: url('img/arteaia/papa\ balenciaga.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
 }
 
 #slide10 {
     background-image: url('img/arteaia/edmond-de-belamy-framed-cropped.jpg');
-}
-
-.slidearteia {
-    height: 400px;
+    height: 100%;
     width: 100%;
-    display: none;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    position: relative;
     justify-content: center;
     align-items: center;
+    background-repeat: no-repeat;
 }
 
-.slidearteia.active {
-    display: flex;
+#slide11 {
+    background-image: url('img/The\ Floating\ Piers\ \(Christo\ y\ Jeanne-Claude\)_\(1\).jpg');
 }
 
 .fondo-opaco {
@@ -782,8 +789,21 @@ nav.menu-principal ul li a.activo {
     color: white;
     padding: 20px;
     border-radius: 8px;
-    max-width: 600px;
+    width: 30%;
     text-align: center;
+}
+
+.fondo-opaco h3{
+    font-size: 3em;
+}
+
+.fondo-opaco h4{
+    font-size: 1.5em;
+}
+
+.fondo-opaco p{
+    font-size: 1.2em;
+    line-height: 1.3;
 }
 
 /* Sección principal */
@@ -808,20 +828,6 @@ nav.menu-principal ul li a.activo {
     overflow: hidden;
 }
 
-.slidearteia {
-    display: none;
-    height: 400px;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-}
-
-.slidearteia.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .contenido-slide {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
@@ -833,45 +839,14 @@ nav.menu-principal ul li a.activo {
 .boton-carrusel2 {
     background-color: transparent;
     border: none;
-    color: #2E2E8E;
+    color: #2A1E5C;
     font-size: 60px;
     cursor: pointer;
     padding: 0;
 }
 
-.boton-carrusel2.prev:hover {
-    left: 10px;
-    color: #0AD3FF;
-}
-
-.boton-carrusel2.next:hover {
-    right: 10px;
-    color: #0AD3FF;
-}
-
-.informacion-nav2.next {
-    position: static;
-}
-
-.indicadores2 {
-    display: flex;
-    justify-content: center;
-    margin: 2% 0;
-}
-
-.circulo2 {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    margin: 0 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.circulo2:hover,
-.circulo2.active {
-    background-color: #2E2E8E;
+.boton-carrusel2:hover {
+    color: #54bee7;
 }
 
 .ventajas {
@@ -1933,7 +1908,56 @@ nav.menu-principal ul li a.activo {
     }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 425px) {
+
+    /*Home*/
+
+    .logo img {
+        width: 190px;
+        height: auto;
+    }
+
+    .resaltado {
+        background-color: #2a1e5cc5;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+    }
+    
+    .slide p {
+        font-size: 0.8rem;
+        padding: 1% 0;
+    }
+
+    .circulo {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+    .texto-columnas {
+        display:block;
+    }
+
+    .grilla{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /**/
     .contacto-contenedor {
         display: flex;
         flex-direction: column;
@@ -1974,8 +1998,133 @@ nav.menu-principal ul li a.activo {
         height: 30px;
     }
 
-    .suscripcion-formulario{
+    .footer-redes {
+        justify-content: center;
+        gap: 0;
+    }
+
+    .suscripcion-formulario input {
+        padding: 5px;
+        font-size: 0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        flex: 1;
+        text-align: left;
+    }
+
+    .suscripcion-formulario button {
+        padding: 6px;
+        font-size: 0.5rem;
+        background-color: #2A1E5C;
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+    }
+
+    .suscripcion-texto {
+        font-size: 0.5rem;
+        margin-left: 0;
+    }
+
+    .footer-info {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 325px) {
+
+    /*Home*/
+
+    .logo img {
+        width: 190px;
+        height: auto;
+    }
+
+    .resaltado {
+        background-color: #2a1e5cc5;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+    }
+    
+    .slide p {
+        font-size: 0.8rem;
+        padding: 1% 0;
+    }
+
+    .circulo {
         width: 10px;
+        height: 10px;
+        margin: 5px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+
+    .texto-columnas {
+        display:block;
+    }
+
+    .grilla{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /**/
+    .contacto-contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        max-width: 95%; /* Asegurarse de que todo encaje */
+    }
+
+    .contacto-redes h3,
+    .contacto-formulario h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contacto-formulario input,
+    .contacto-formulario textarea {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .contacto-formulario textarea {
+        height: 80px; /* Reducir altura */
+    }
+
+    .contacto-formulario button {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-redes img {
+        width: 30px;
+        height: 30px;
     }
 
     .footer-redes {
@@ -2007,6 +2156,7 @@ nav.menu-principal ul li a.activo {
 
     .suscripcion-texto {
         font-size: 0.5rem;
+        margin-left: 0;
     }
 
     .footer-info {
